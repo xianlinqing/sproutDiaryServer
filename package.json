@@ -1,0 +1,32 @@
+{
+  "name": "sprout-diary-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch --import tsx src/main.ts",
+    "start": "node --env-file-if-exists=.env dist/main.js",
+    "build": "tsc",
+    "test": "tsx --test test/*.test.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fastify/jwt": "^10.2.5",
+    "@fastify/multipart": "^10.1.6",
+    "@fastify/rate-limit": "^11.2.1",
+    "fastify": "^5.12.7",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "pg-mem": "^3.0.14",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
